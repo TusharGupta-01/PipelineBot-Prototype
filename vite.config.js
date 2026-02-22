@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(),tailwindcss(),],
-  base: "/PipelineBot-Prototype",
+  base: process.env.VITE_BASE_PATH ||"/PipelineBot-Prototype",
   resolve: {
     alias: {
       // Alias @ to the src directory
